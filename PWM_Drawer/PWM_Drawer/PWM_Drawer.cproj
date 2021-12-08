@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.microchip.xc8</ToolchainName>
+    <ProjectGuid>2285C48D-296E-43FD-A7B6-69885F64CFFD</ProjectGuid>
+    <avrdevice>ATmega32A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>PWM_Drawer</AssemblyName>
+    <Name>PWM_Drawer</Name>
+    <RootNamespace>PWM_Drawer</RootNamespace>
+    <ToolchainFlavour>XC8_2.31</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.49.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <com.microchip.xc8>
+        <com.microchip.xc8.common.optimization.RelaxBranches>True</com.microchip.xc8.common.optimization.RelaxBranches>
+        <com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <com.microchip.xc8.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>(%24DeviceMacro)</Value>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </com.microchip.xc8.compiler.symbols.DefSymbols>
+        <com.microchip.xc8.compiler.optimization.level>Optimize for size (-Os)</com.microchip.xc8.compiler.optimization.level>
+        <com.microchip.xc8.compiler.optimization.PackStructureMembers>True</com.microchip.xc8.compiler.optimization.PackStructureMembers>
+        <com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>True</com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>
+        <com.microchip.xc8.compiler.warnings.AllWarnings>True</com.microchip.xc8.compiler.warnings.AllWarnings>
+        <com.microchip.xc8.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </com.microchip.xc8.linker.libraries.Libraries>
+      </com.microchip.xc8>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <com.microchip.xc8>
+        <com.microchip.xc8.common.outputfiles.hex>True</com.microchip.xc8.common.outputfiles.hex>
+        <com.microchip.xc8.common.outputfiles.eep>True</com.microchip.xc8.common.outputfiles.eep>
+        <com.microchip.xc8.common.outputfiles.usersignatures>False</com.microchip.xc8.common.outputfiles.usersignatures>
+        <com.microchip.xc8.common.outputfiles.lss>True</com.microchip.xc8.common.outputfiles.lss>
+        <com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <com.microchip.xc8.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>(%24DeviceMacro)</Value>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </com.microchip.xc8.compiler.symbols.DefSymbols>
+        <com.microchip.xc8.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../Util</Value>
+            <Value>../MCAL/DIO</Value>
+            <Value>../HAL/LCD/config</Value>
+            <Value>../HAL/LCD/static</Value>
+            <Value>../MCAL/GPT/config</Value>
+            <Value>../MCAL/GPT/static</Value>
+            <Value>../MCAL/PWM/static</Value>
+            <Value>../MCAL/PWM/config</Value>
+            <Value>../MCAL/ICU/config</Value>
+            <Value>../MCAL/ICU/static</Value>
+            <Value>../APP</Value>
+            <Value>../HAL/GLCD/config</Value>
+            <Value>../HAL/GLCD/static</Value>
+          </ListValues>
+        </com.microchip.xc8.compiler.directories.IncludePaths>
+        <com.microchip.xc8.compiler.optimization.level>Optimize debugging experience (-Og)</com.microchip.xc8.compiler.optimization.level>
+        <com.microchip.xc8.compiler.optimization.PackStructureMembers>True</com.microchip.xc8.compiler.optimization.PackStructureMembers>
+        <com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>True</com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>
+        <com.microchip.xc8.compiler.optimization.DebugLevel>Default (-g2)</com.microchip.xc8.compiler.optimization.DebugLevel>
+        <com.microchip.xc8.compiler.warnings.AllWarnings>True</com.microchip.xc8.compiler.warnings.AllWarnings>
+        <com.microchip.xc8.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </com.microchip.xc8.linker.libraries.Libraries>
+        <com.microchip.xc8.assembler.debugging.DebugLevel>Default (-Wa,-g)</com.microchip.xc8.assembler.debugging.DebugLevel>
+      </com.microchip.xc8>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="APP\PWM_Drawer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\PWM_Drawer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\PWM_Drawer_Pconfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GLCD\config\GLCD_Pconfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GLCD\static\GLCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GLCD\static\GLCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GLCD\static\GLCD_Char_Patterns.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\config\LCD_Pconfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\static\LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\static\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GPT\config\GPT_Lconfig.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GPT\config\GPT_Pconfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GPT\static\GPT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GPT\static\GPT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ICU\config\ICU_Lconfig.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ICU\static\ICU.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ICU\static\ICU.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PWM\config\PWM_Lconfig.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PWM\config\PWM_Pconfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PWM\static\PWM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PWM\static\PWM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Util\ATmega32A_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Util\Bit_Macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Util\Std_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HAL\GLCD\config" />
+    <Folder Include="HAL\GLCD\static" />
+    <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\LCD\config" />
+    <Folder Include="HAL\LCD\static" />
+    <Folder Include="HAL\GLCD" />
+    <Folder Include="MCAL" />
+    <Folder Include="HAL" />
+    <Folder Include="APP" />
+    <Folder Include="MCAL\DIO" />
+    <Folder Include="MCAL\GPT" />
+    <Folder Include="MCAL\GPT\config" />
+    <Folder Include="MCAL\GPT\static" />
+    <Folder Include="MCAL\ICU" />
+    <Folder Include="MCAL\ICU\config" />
+    <Folder Include="MCAL\ICU\static" />
+    <Folder Include="MCAL\PWM" />
+    <Folder Include="MCAL\PWM\config" />
+    <Folder Include="MCAL\PWM\static" />
+    <Folder Include="Util" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
