@@ -763,17 +763,17 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x46a7
+.debug_info     0x0000000000000000     0x46d5
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
  .debug_info    0x00000000000004e6      0x9d2 APP/PWM_Drawer.o
  .debug_info    0x0000000000000eb8     0x10a1 HAL/GLCD/static/GLCD.o
- .debug_info    0x0000000000001f59      0x489 main.o
- .debug_info    0x00000000000023e2      0xa5f MCAL/DIO/DIO.o
- .debug_info    0x0000000000002e41      0x4c7 MCAL/ICU/config/ICU_Lconfig.o
- .debug_info    0x0000000000003308      0x8db MCAL/ICU/static/ICU.o
- .debug_info    0x0000000000003be3      0x42e MCAL/PWM/config/PWM_Lconfig.o
- .debug_info    0x0000000000004011      0x696 MCAL/PWM/static/PWM.o
+ .debug_info    0x0000000000001f59      0x4a0 main.o
+ .debug_info    0x00000000000023f9      0xa5f MCAL/DIO/DIO.o
+ .debug_info    0x0000000000002e58      0x4c7 MCAL/ICU/config/ICU_Lconfig.o
+ .debug_info    0x000000000000331f      0x8db MCAL/ICU/static/ICU.o
+ .debug_info    0x0000000000003bfa      0x445 MCAL/PWM/config/PWM_Lconfig.o
+ .debug_info    0x000000000000403f      0x696 MCAL/PWM/static/PWM.o
 
 .debug_abbrev   0x0000000000000000      0xd42
  *(.debug_abbrev)

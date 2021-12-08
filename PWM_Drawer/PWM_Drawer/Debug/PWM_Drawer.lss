@@ -11,23 +11,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   3 .debug_aranges 00000218  00000000  00000000  00001c39  2**0
                   CONTENTS, READONLY, DEBUGGING
-  4 .debug_info   000046a7  00000000  00000000  00001e51  2**0
+  4 .debug_info   000046d5  00000000  00000000  00001e51  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_abbrev 00000d42  00000000  00000000  000064f8  2**0
+  5 .debug_abbrev 00000d42  00000000  00000000  00006526  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   0000127a  00000000  00000000  0000723a  2**0
+  6 .debug_line   0000127a  00000000  00000000  00007268  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  000005a4  00000000  00000000  000084b4  2**2
+  7 .debug_frame  000005a4  00000000  00000000  000084e4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_str    00000347  00000000  00000000  00008a58  2**0
+  8 .debug_str    00000347  00000000  00000000  00008a88  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_loc    00001efb  00000000  00000000  00008d9f  2**0
+  9 .debug_loc    00001efb  00000000  00000000  00008dcf  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00000188  00000000  00000000  0000ac9a  2**0
+ 10 .debug_ranges 00000188  00000000  00000000  0000acca  2**0
                   CONTENTS, READONLY, DEBUGGING
  11 .text         00000004  00001b92  00001b92  00001c06  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 12 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000ae24  2**2
+ 12 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000ae54  2**2
                   CONTENTS, READONLY, DEBUGGING
  13 .text.PWMDrawer_Init 0000001e  000019e4  000019e4  00001a58  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
@@ -2077,8 +2077,8 @@ int main(void)
 
 	__builtin_avr_delay_cycles(__ticks_dc);
     165e:	bf ef       	ldi	r27, 0xFF	; 255
-    1660:	29 e6       	ldi	r18, 0x69	; 105
-    1662:	88 e1       	ldi	r24, 0x18	; 24
+    1660:	21 ee       	ldi	r18, 0xE1	; 225
+    1662:	84 e0       	ldi	r24, 0x04	; 4
     1664:	b1 50       	subi	r27, 0x01	; 1
     1666:	20 40       	sbci	r18, 0x00	; 0
     1668:	80 40       	sbci	r24, 0x00	; 0

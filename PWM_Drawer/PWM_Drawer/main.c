@@ -21,6 +21,6 @@ int main(void)
 		PWMDrawer_MeasureSignal(&Signal_Data);
 		Scale_ms = (Signal_Data.Period_Time_ms) / 5;
 		PWMDrawer_DrawSignal(&Signal_Data, Scale_ms);
-		_delay_ms(500);
+		_delay_ms(100);
     }
 }
