@@ -334,7 +334,7 @@ Disassembly of section .text:
 Disassembly of section .text:
 
 00001b92 <__bad_interrupt>:
-    1b92:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+    1b92:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
 
 Disassembly of section .text.PWMDrawer_Init:
 
@@ -3144,8 +3144,8 @@ Disassembly of section .text.PWM_InitTimer1:
  634:	5f e3       	ldi	r21, 0x3F	; 63
  636:	0e 94 91 0d 	call	0x1b22	; 0x1b22 <__subsf3>
  63a:	0e 94 39 0b 	call	0x1672	; 0x1672 <__fixunssfsi>
- 63e:	70 93 61 00 	sts	0x0061, r23	; 0x800061 <_edata+0x1>
- 642:	60 93 60 00 	sts	0x0060, r22	; 0x800060 <_edata>
+ 63e:	70 93 61 00 	sts	0x0061, r23	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 642:	60 93 60 00 	sts	0x0060, r22	; 0x800060 <__DATA_REGION_ORIGIN__>
  646:	77 bd       	out	0x27, r23	; 39
  648:	66 bd       	out	0x26, r22	; 38
  64a:	f6 01       	movw	r30, r12
@@ -3179,8 +3179,8 @@ Disassembly of section .text.PWM_InitTimer1:
  682:	24 91       	lpm	r18, Z
  684:	e7 fc       	sbrc	r14, 7
  686:	20 81       	ld	r18, Z
- 688:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
- 68c:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <_edata+0x1>
+ 688:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 68c:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
  690:	28 9f       	mul	r18, r24
  692:	b0 01       	movw	r22, r0
  694:	29 9f       	mul	r18, r25
@@ -3219,8 +3219,8 @@ Disassembly of section .text.PWM_InitTimer1:
  6de:	0e 94 91 0d 	call	0x1b22	; 0x1b22 <__subsf3>
  6e2:	4b 01       	movw	r8, r22
  6e4:	5c 01       	movw	r10, r24
- 6e6:	60 91 60 00 	lds	r22, 0x0060	; 0x800060 <_edata>
- 6ea:	70 91 61 00 	lds	r23, 0x0061	; 0x800061 <_edata+0x1>
+ 6e6:	60 91 60 00 	lds	r22, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 6ea:	70 91 61 00 	lds	r23, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
  6ee:	80 e0       	ldi	r24, 0x00	; 0
  6f0:	90 e0       	ldi	r25, 0x00	; 0
  6f2:	0e 94 5b 0a 	call	0x14b6	; 0x14b6 <__floatunsisf>
@@ -3257,8 +3257,8 @@ Disassembly of section .text.PWM_InitTimer1:
  738:	24 91       	lpm	r18, Z
  73a:	e7 fc       	sbrc	r14, 7
  73c:	20 81       	ld	r18, Z
- 73e:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
- 742:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <_edata+0x1>
+ 73e:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 742:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
  746:	28 9f       	mul	r18, r24
  748:	b0 01       	movw	r22, r0
  74a:	29 9f       	mul	r18, r25
@@ -3297,8 +3297,8 @@ Disassembly of section .text.PWM_InitTimer1:
  794:	0e 94 91 0d 	call	0x1b22	; 0x1b22 <__subsf3>
  798:	4b 01       	movw	r8, r22
  79a:	5c 01       	movw	r10, r24
- 79c:	60 91 60 00 	lds	r22, 0x0060	; 0x800060 <_edata>
- 7a0:	70 91 61 00 	lds	r23, 0x0061	; 0x800061 <_edata+0x1>
+ 79c:	60 91 60 00 	lds	r22, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 7a0:	70 91 61 00 	lds	r23, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
  7a4:	80 e0       	ldi	r24, 0x00	; 0
  7a6:	90 e0       	ldi	r25, 0x00	; 0
  7a8:	0e 94 5b 0a 	call	0x14b6	; 0x14b6 <__floatunsisf>
