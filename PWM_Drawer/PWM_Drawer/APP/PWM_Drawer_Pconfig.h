@@ -13,7 +13,7 @@
 
 #if GENERATE_PWM_FROM_SAME_MCU == 0
 	/* If the different MCUs is used to generate PWM signal and display it using LCD */
-	#define GLCD_MCU							(0U)		/* 1 if this is the MCU to display the signal using GLCD only, 0 if this is the MCU generating PWM only */
+	#define GLCD_MCU						(0U)		/* 1 if this is the MCU to display the signal using GLCD only, 0 if this is the MCU generating PWM only */
 #endif
 
 
